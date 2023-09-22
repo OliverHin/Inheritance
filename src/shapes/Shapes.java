@@ -23,11 +23,11 @@ public abstract class Shapes {
         this.color = color;
     }
 
-    public boolean isFilled() {
+    public boolean getIsFilled() {
         return isFilled;
     }
 
-    public void setFilled(boolean filled) {
+    public void setIsFilled(boolean filled) {
         isFilled = filled;
     }
 

@@ -13,9 +13,11 @@ public class CreatingShapes {
         allShapes.add(c1);
         allShapes.add(r1);
         allShapes.add(s1);
+        r1.setIsFilled(true);
 
-        for (Shapes shapy : allShapes) {
-            shapy.showOff();
+
+        for (Shapes shape : allShapes) {
+            shape.showOff();
         }
     }
 }

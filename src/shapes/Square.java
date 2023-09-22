@@ -1,30 +1,9 @@
 package shapes;
 
-public class Square extends Shapes {
-
-    private double length;
+public class Square extends Rectangle {
 
     public Square(String color, boolean isFilled, double length) {
-        super(color, isFilled);
-        this.length = length;
-    }
-
-    @Override
-    public double getArea(){
-
-        //double area = 0;
-        return length * length;
-        //return area;
-
-    }
-
-    @Override
-    public double getPerimeter() {
-
-        //double perimeter = 0;
-        return length * 4;
-        //return perimeter;
-
+        super(color, isFilled, length, length);
     }
 
     @Override
@@ -40,15 +19,22 @@ public class Square extends Shapes {
         System.out.println("The perimeter of the square is: " + getPerimeter());
     }
 
-    public double getLength() {
-        return length;
-    }
 
+    @Override
     public void setLength(double length) {
         if (length <= 0) {
             throw new IllegalArgumentException("Width or length can't be null or negative");
         }
-        this.length = length;
+        this.setLength(length);
+        this.setWidth(length);
+    }
+    @Override
+    public void setWidth(double width) {
+        if (width <= 0) {
+            throw new IllegalArgumentException("Width or length can't be null or negative");
+        }
+        this.setLength(width);
+        this.setWidth(width);
     }
 
 
